@@ -1,0 +1,29 @@
+form {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+
+    input,
+    textarea {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border: 1px solid purple;
+        background-color: white;
+        color: black;
+    }
+
+    button {
+        background-color: purple;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: palevioletred;
+            color: black;
+        }
+    }
+}

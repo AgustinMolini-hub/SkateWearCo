@@ -1,0 +1,36 @@
+.marca {
+    font-size: 2.5rem;
+    color: purple;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.titulo {
+    padding: 1rem;
+    color: white;
+}
+
+.locales-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    img {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: purple;
+        margin-top: 1rem;
+
+        @media (min-width: 768px) {
+            font-size: 3rem;
+        }
+    }
+}

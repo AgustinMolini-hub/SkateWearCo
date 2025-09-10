@@ -1,0 +1,29 @@
+.marca {
+    font-size: 2.5rem;
+    color: purple;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.titulo {
+    padding: 1rem;
+    color: white;
+}
+
+.contacto-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.lista-contacto {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+
+    li {
+        color: palevioletred;
+        margin-bottom: 0.5rem;
+    }
+}

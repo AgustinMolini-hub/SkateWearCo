@@ -1,24 +1,15 @@
-@use 'partials/variables';
+@use'variables';
 
-@use 'partials/mixins';
+@use'base/typography';
 
-@use 'partials/animations';
+@use'components/logo';
+@use'components/maps';
+@use'components/navbar';
+@use'components/videos';
+@use'components/form';
+@use'components/footer';
 
-@use 'partials/typography';
-
-
-@use 'partials/functions';
-
-@use 'partials/reset';
-
-@use 'partials/header';
-
-@use 'partials/nav';
-
-@use 'partials/body';
-
-@use 'partials/footer';
-
-@use 'partials/main';
-
-@use 'partials/media';
+@use'pages/index';
+@use'pages/contacto';
+@use'pages/coleccion';
+@use'pages/locales';

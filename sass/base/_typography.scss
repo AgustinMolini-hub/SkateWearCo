@@ -1,0 +1,58 @@
+body {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+  background-color: black;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.marca {
+  text-align: center;
+  font-size: 2.5rem;
+  color: purple;
+  margin-top: 1rem;
+}
+
+.titulo {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+}
+.marca {
+  text-align: center;
+  font-size: 2.5rem;
+  color: purple;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.titulo {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+}
+.container-fluid {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+h1 {
+  text-align: center;
+  color: purple;
+}

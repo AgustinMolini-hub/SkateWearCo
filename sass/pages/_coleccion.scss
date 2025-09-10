@@ -1,0 +1,48 @@
+.marca {
+  font-size: 2.5rem;
+  color: purple;
+  text-align: center;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  color: palevioletred;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+}
+
+p {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+
+  @media (min-width: 768px) {
+    font-size: 1.2rem;
+    padding: 2rem;
+  }
+}
+
+.zapas,
+.remeras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+
+  img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    justify-content: space-around;
+  }
+}

@@ -1,9 +1,0 @@
-@use 'variables' as *;
-
-body {
-  background-color: $color-secondary;
-  font-family: $font-main;
-  font-weight: 300;
-  font-size: $font-size-base;
-  overflow-x: hidden;
-}

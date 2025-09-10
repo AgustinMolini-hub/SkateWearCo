@@ -1,0 +1,39 @@
+.navbar-nav .nav-link {
+    color: palevioletred;
+    font-weight: bold;
+
+    &:hover {
+        color: pink;
+    }
+}
+
+.navbar-toggler {
+    border-color: purple;
+
+    .navbar-toggler-icon {
+        background-image: none;
+        width: 24px;
+        height: 2px;
+        background-color: purple;
+        display: block;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: purple;
+            left: 0;
+        }
+
+        &::before {
+            top: -8px;
+        }
+
+        &::after {
+            top: 8px;
+        }
+    }
+}
