@@ -1,12 +1,13 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let cliente = localStorage.getItem("cliente") || "";
 
+// Normaliza productos antiguos sin cantidad
 carrito.forEach(item => {
   if (!item.cantidad) item.cantidad = 1;
 });
 
 // Cargar productos desde JSON
-fetch("js/productos.json")
+fetch("../js/productos.json")
   .then(res => res.json())
   .then(data => renderProductos(data));
 
@@ -14,17 +15,35 @@ function renderProductos(productos) {
   const contenedor = document.getElementById("contenedor-productos");
   if (!contenedor) return;
 
-  productos.forEach(producto => {
-    const div = document.createElement("div");
-    div.className = "producto text-center";
-    div.innerHTML = `
-      <img src="../${producto.imagen}" alt="${producto.nombre}" />
-      <p>$${producto.precio.toLocaleString("es-AR")}</p>
-      <button class="btn btn-dark mt-1" onclick="agregarAlCarritoDesdeColeccion('${producto.nombre}', ${producto.precio})">
-        Agregar al carrito
-      </button>
-    `;
-    contenedor.appendChild(div);
+  const bloques = [productos.slice(0, 6), productos.slice(6)];
+
+  bloques.forEach((grupo, index) => {
+    const bloque = document.createElement("div");
+    bloque.className = "bloque-productos mb-5";
+
+    const titulo = document.createElement("h3");
+    titulo.className = "text-center mb-3";
+    titulo.textContent = index === 0 ? "Zapatillas" : "Remeras";
+
+    const fila = document.createElement("div");
+    fila.className = "d-flex flex-wrap justify-content-center gap-4";
+
+    grupo.forEach(producto => {
+      const div = document.createElement("div");
+      div.className = "producto text-center";
+      div.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}" />
+        <p>$${producto.precio.toLocaleString("es-AR")}</p>
+        <button class="btn btn-dark mt-1" onclick="agregarAlCarritoDesdeColeccion('${producto.nombre}', ${producto.precio})">
+          Agregar al carrito
+        </button>
+      `;
+      fila.appendChild(div);
+    });
+
+    bloque.appendChild(titulo);
+    bloque.appendChild(fila);
+    contenedor.appendChild(bloque);
   });
 }
 

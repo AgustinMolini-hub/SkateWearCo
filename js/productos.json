@@ -1,0 +1,62 @@
+[
+    {
+        "nombre": "Zapatilla Fallen Negra y Blanca",
+        "precio": 40000,
+        "imagen": "../imagenes/zapas1.jpg"
+    },
+    {
+        "nombre": "Zapatilla Fallen Negra logo Verde",
+        "precio": 35000,
+        "imagen": "../imagenes/zapas2.jpg"
+    },
+    {
+        "nombre": "Zapatilla Fallen Blanca",
+        "precio": 40000,
+        "imagen": "../imagenes/zapas3.jpg"
+    },
+    {
+        "nombre": "Zapatilla Fallen Cuerina",
+        "precio": 45000,
+        "imagen": "../imagenes/zapas4.jpg"
+    },
+    {
+        "nombre": "Zapatilla Fallen Blanca Suela Caramelo",
+        "precio": 45000,
+        "imagen": "../imagenes/zapas5.jpg"
+    },
+    {
+        "nombre": "Zapatilla Fallen Negra Clasica",
+        "precio": 35000,
+        "imagen": "../imagenes/zapas6.jpg"
+    },
+    {
+        "nombre": "Remera Manga Corta BP",
+        "precio": 20000,
+        "imagen": "../imagenes/mangacorta.png"
+    },
+    {
+        "nombre": "Musculosa Vans",
+        "precio": 18500,
+        "imagen": "../imagenes/musculosa.png"
+    },
+    {
+        "nombre": "Remera Manga Larga BP",
+        "precio": 22500,
+        "imagen": "../imagenes/mangalarga.png"
+    },
+    {
+        "nombre": "Remera Manga Corta Fallen",
+        "precio": 20000,
+        "imagen": "../imagenes/mangacorta1.jpg"
+    },
+    {
+        "nombre": "Remera Estampada BP",
+        "precio": 20500,
+        "imagen": "../imagenes/mangacorta2.jpg"
+    },
+    {
+        "nombre": "Remera Manga Corta Vans",
+        "precio": 20000,
+        "imagen": "../imagenes/mangacorta3.jpg"
+    }
+]
