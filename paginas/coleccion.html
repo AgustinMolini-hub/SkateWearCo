@@ -2,173 +2,88 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Colección de productos SkateWear Co. Zapatillas, remeras y accesorios para skaters." />
-    <meta name="author" content="Agustín Molini" />
-    <title>Colección | SkateWear Co.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Colección de productos SkateWear Co. Zapatillas, remeras y accesorios para skaters." />
+  <meta name="author" content="Agustín Molini" />
+  <title>Colección | SkateWear Co.</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
 
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../styles/estilos.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../styles/estilos.css" />
 </head>
 
 <body class="cuerpo">
-    <div class="container-fluid">
-        <header class="py-3">
-            <div class="d-flex justify-content-between align-items-center">
-                <img class="logo" src="../imagenes/logo3.png" alt="Logo SkateWear Co." />
-                <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+  <div class="container-fluid">
+    <header class="py-3">
+      <div class="d-flex justify-content-between align-items-center">
+        <img class="logo" src="../imagenes/logo3.png" alt="Logo SkateWear Co." />
+        <button class="navbar-toggler d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
-            <nav class="navbar navbar-expand-md">
-                <div class="collapse navbar-collapse" id="menuPrincipal">
-                    <ul class="navbar-nav ms-auto lista">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./coleccion.html">Colección</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./locales.html">Locales</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+      <nav class="navbar navbar-expand-md">
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto lista">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="./coleccion.html">Colección</a></li>
+            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="./locales.html">Locales</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
-        <main>
-            <section class="text-center py-4">
-                <h1 class="marca">Colección</h1>
-                <p>Contamos con varios modelos de Zapatillas Fallen.</p>
+    <main>
+      <section class="text-center py-4">
+        <h1 class="marca">Colección</h1>
+        <p>Contamos con varios modelos de Zapatillas Fallen y remeras exclusivas.</p>
 
-                <h2 class="animate__animated animate__flash animate__infinite">Zapatillas</h2>
-                <div class="zapas d-flex flex-wrap justify-content-center gap-4">
-                    <div class="producto text-center">
-                        <img src="../imagenes/zapas1.jpg" alt="Zapatilla Fallen Negra" />
-                        <p>$40.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Zapatilla Fallen Negra', 40000)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/zapas2.jpg" alt="Zapatilla Fallen Negra logo Verde" />
-                        <p>$35.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Zapatilla Fallen Negra logo Verde', 35000)">Agregar
-                            al carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/zapas3.jpg" alt="Zapatilla Fallen Blanca" />
-                        <p>$40.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Zapatilla Fallen Blanca', 40000)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/zapas4.jpg" alt="Zapatilla Fallen Cuerina" />
-                        <p>$45.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Zapatilla Fallen Cuerina', 45000)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/zapas5.jpg" alt="Zapatilla Fallen Blanca Suela Caramelo" />
-                        <p>$45.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Zapatilla Fallen Blanca Suela Caramelo', 45000)">Agregar
-                            al carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/zapas6.jpg" alt="Zapatilla Fallen Negra Clasica" />
-                        <p>$35.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Zapatilla Fallen Negra Clasica', 35000)">Agregar al
-                            carrito</button>
-                    </div>
-                </div>
+        <h2 class="animate__animated animate__flash animate__infinite">Productos</h2>
+        <p>Todos nuestros productos: zapatillas, remeras y más</p>
 
-                <h2 class="animate__animated animate__flash animate__infinite mt-5">Remeras</h2>
-                <p>Tenemos remeras desde mangas cortas, musculosas y mangas largas</p>
-                <div class="remeras d-flex flex-wrap justify-content-center gap-4">
-                    <div class="producto text-center">
-                        <img src="../imagenes/mangacorta.png" alt="Remera Manga Corta BP" />
-                        <p>$20.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Remera Manga Corta BP', 20000)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/musculosa.png" alt="Musculosa Vans" />
-                        <p>$18.500</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Musculosa Vans', 18500)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/mangalarga.png" alt="Remera Manga Larga BP" />
-                        <p>$22.500</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Remera Manga Larga BP', 22500)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/mangacorta1.jpg" alt="Remera Manga Corta Fallen" />
-                        <p>$20.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Remera Manga Corta Fallen', 20000)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/mangacorta2.jpg" alt="Remera Estampada BP" />
-                        <p>$20.500</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Remera Estampada BP', 20500)">Agregar al
-                            carrito</button>
-                    </div>
-                    <div class="producto text-center">
-                        <img src="../imagenes/mangacorta3.jpg" alt="Remera Manga Corta Vans" />
-                        <p>$20.000</p>
-                        <button class="btn btn-dark mt-1"
-                            onclick="agregarAlCarritoDesdeColeccion('Remera Manga Corta Vans', 20000)">Agregar al
-                            carrito</button>
-                    </div>
-                </div>
-            </section>
+        <!-- Contenedor dinámico de productos -->
+        <div id="contenedor-productos" class="d-flex flex-wrap justify-content-center gap-4 mt-4"></div>
+      </section>
 
-            <!-- Nombre del cliente -->
-            <div class="mt-5 text-center">
-                <label for="nombre-cliente" class="form-label">Nombre del cliente:</label>
-                <input type="text" id="nombre-cliente" class="form-control mx-auto" style="max-width: 300px;"
-                    oninput="guardarCliente()" placeholder="Ingresá tu nombre" />
-            </div>
+      <!-- Nombre del cliente -->
+      <div class="mt-5 text-center">
+        <label for="nombre-cliente" class="form-label">Nombre del cliente:</label>
+        <input type="text" id="nombre-cliente" class="form-control mx-auto" style="max-width: 300px;"
+          oninput="guardarCliente()" placeholder="Ingresá tu nombre" />
+      </div>
 
-            <!-- Carrito y resumen -->
-            <section id="carrito" class="mt-5 text-center">
-                <h2>Carrito actual</h2>
-                <ul id="lista-carrito" class="list-group mx-auto" style="max-width: 500px;"></ul>
-                <div id="resumen-compra" class="mt-4"></div>
-            </section>
-        </main>
+      <!-- Carrito y resumen -->
+      <section id="carrito" class="mt-5 text-center">
+        <h2>Carrito actual</h2>
+        <ul id="lista-carrito" class="list-group mx-auto" style="max-width: 500px;"></ul>
+        <div id="resumen-compra" class="mt-4"></div>
+      </section>
+    </main>
 
-        <footer>
-            <p class="blink text-center">&copy; 2025 Skatewear Co.</p>
-        </footer>
-    </div>
+    <footer>
+      <p class="blink text-center">&copy; 2025 Skatewear Co.</p>
+    </footer>
+  </div>
 
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Simulador JS -->
-    <script src="../js/coleccion.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Simulador JS -->
+  <script src="../js/coleccion.js"></script>
 </body>
 
 </html>

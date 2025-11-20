@@ -5,13 +5,36 @@ carrito.forEach(item => {
   if (!item.cantidad) item.cantidad = 1;
 });
 
+// Cargar productos desde JSON
+fetch("js/productos.json")
+  .then(res => res.json())
+  .then(data => renderProductos(data));
+
+function renderProductos(productos) {
+  const contenedor = document.getElementById("contenedor-productos");
+  if (!contenedor) return;
+
+  productos.forEach(producto => {
+    const div = document.createElement("div");
+    div.className = "producto text-center";
+    div.innerHTML = `
+      <img src="../${producto.imagen}" alt="${producto.nombre}" />
+      <p>$${producto.precio.toLocaleString("es-AR")}</p>
+      <button class="btn btn-dark mt-1" onclick="agregarAlCarritoDesdeColeccion('${producto.nombre}', ${producto.precio})">
+        Agregar al carrito
+      </button>
+    `;
+    contenedor.appendChild(div);
+  });
+}
+
 function agregarAlCarritoDesdeColeccion(nombre, precio) {
   const productoExistente = carrito.find(item => item.nombre === nombre);
 
   if (productoExistente) {
-    productoExistente.cantidad += 1; 
+    productoExistente.cantidad += 1;
   } else {
-    carrito.push({ nombre, precio, cantidad: 1 }); 
+    carrito.push({ nombre, precio, cantidad: 1 });
   }
 
   localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -42,7 +65,7 @@ function finalizarCompra() {
   }
 
   const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-  mostrarMensaje(`Gracias ${cliente || "cliente"} por tu compra de $${total}`);
+  mostrarMensaje(`Gracias ${cliente || "cliente"} por tu compra de $${total.toLocaleString("es-AR")}`);
   vaciarCarrito();
 }
 
@@ -62,7 +85,7 @@ function renderCarrito() {
     const li = document.createElement("li");
     li.className = "list-group-item d-flex justify-content-between align-items-center";
     li.innerHTML = `
-      ${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad}
+      ${item.nombre} x${item.cantidad} unidades - $${(item.precio * item.cantidad).toLocaleString("es-AR")}
       <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${index})">Eliminar</button>
     `;
     lista.appendChild(li);
@@ -83,7 +106,7 @@ function renderResumen() {
     <div class="alert alert-info mt-3">
       <h5>Resumen de compra</h5>
       <p>Cliente: <strong>${cliente || "Sin nombre"}</strong></p>
-      <p>Total acumulado: <strong>$${total}</strong></p>
+      <p>Total acumulado: <strong>$${total.toLocaleString("es-AR")}</strong></p>
       <div class="d-flex justify-content-center gap-2 mt-3">
         <button class="btn btn-success" onclick="finalizarCompra()">Finalizar compra</button>
         <button class="btn btn-secondary" onclick="vaciarCarrito()">Vaciar carrito</button>
@@ -93,11 +116,12 @@ function renderResumen() {
 }
 
 function mostrarMensaje(texto) {
-  const mensaje = document.createElement("div");
-  mensaje.className = "alert alert-success text-center mt-3";
-  mensaje.textContent = texto;
-  document.body.appendChild(mensaje);
-  setTimeout(() => mensaje.remove(), 3000);
+  Swal.fire({
+    text: texto,
+    icon: "success",
+    timer: 2000,
+    showConfirmButton: false
+  });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
