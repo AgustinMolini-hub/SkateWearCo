@@ -1,9 +1,19 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let cliente = localStorage.getItem("cliente") || "";
 
+carrito.forEach(item => {
+  if (!item.cantidad) item.cantidad = 1;
+});
+
 function agregarAlCarritoDesdeColeccion(nombre, precio) {
-  const producto = { nombre, precio };
-  carrito.push(producto);
+  const productoExistente = carrito.find(item => item.nombre === nombre);
+
+  if (productoExistente) {
+    productoExistente.cantidad += 1; 
+  } else {
+    carrito.push({ nombre, precio, cantidad: 1 }); 
+  }
+
   localStorage.setItem("carrito", JSON.stringify(carrito));
   renderCarrito();
   renderResumen();
@@ -30,7 +40,8 @@ function finalizarCompra() {
     mostrarMensaje("El carrito está vacío");
     return;
   }
-  const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+
+  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
   mostrarMensaje(`Gracias ${cliente || "cliente"} por tu compra de $${total}`);
   vaciarCarrito();
 }
@@ -51,7 +62,7 @@ function renderCarrito() {
     const li = document.createElement("li");
     li.className = "list-group-item d-flex justify-content-between align-items-center";
     li.innerHTML = `
-      ${item.nombre} - $${item.precio}
+      ${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad}
       <button class="btn btn-sm btn-danger" onclick="eliminarProducto(${index})">Eliminar</button>
     `;
     lista.appendChild(li);
@@ -67,7 +78,7 @@ function renderResumen() {
     return;
   }
 
-  const total = carrito.reduce((acc, item) => acc + item.precio, 0);
+  const total = carrito.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
   resumen.innerHTML = `
     <div class="alert alert-info mt-3">
       <h5>Resumen de compra</h5>
